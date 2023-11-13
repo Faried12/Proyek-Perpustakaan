@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Waktu pembuatan: 13 Nov 2023 pada 07.31
+-- Waktu pembuatan: 13 Nov 2023 pada 13.24
 -- Versi server: 10.4.28-MariaDB
 -- Versi PHP: 8.2.4
 
@@ -79,6 +79,7 @@ INSERT INTO `data_buku` (`id_buku`, `nama`, `kategori`, `penulis`, `stock`) VALU
 CREATE TABLE `peminjaman` (
   `id_peminjaman` varchar(11) NOT NULL,
   `tanggal_peminjaman` date NOT NULL,
+  `pengembalian` tinyint(1) NOT NULL,
   `id_anggota` varchar(11) NOT NULL,
   `id_buku` varchar(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
