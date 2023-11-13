@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Waktu pembuatan: 03 Nov 2023 pada 02.37
+-- Waktu pembuatan: 13 Nov 2023 pada 07.31
 -- Versi server: 10.4.28-MariaDB
 -- Versi PHP: 8.2.4
 
@@ -83,6 +83,19 @@ CREATE TABLE `peminjaman` (
   `id_buku` varchar(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
+-- --------------------------------------------------------
+
+--
+-- Struktur dari tabel `pengembalian`
+--
+
+CREATE TABLE `pengembalian` (
+  `id_pengembalian` varchar(11) NOT NULL,
+  `tanggal_pengembalian` date NOT NULL,
+  `denda` int(11) NOT NULL,
+  `id_peminjaman` varchar(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
 --
 -- Indexes for dumped tables
 --
@@ -103,7 +116,33 @@ ALTER TABLE `data_buku`
 -- Indeks untuk tabel `peminjaman`
 --
 ALTER TABLE `peminjaman`
-  ADD PRIMARY KEY (`id_peminjaman`,`id_anggota`,`id_buku`);
+  ADD PRIMARY KEY (`id_peminjaman`),
+  ADD KEY `id_anggota` (`id_anggota`,`id_buku`),
+  ADD KEY `id_buku` (`id_buku`);
+
+--
+-- Indeks untuk tabel `pengembalian`
+--
+ALTER TABLE `pengembalian`
+  ADD PRIMARY KEY (`id_pengembalian`),
+  ADD KEY `id_peminjaman` (`id_peminjaman`);
+
+--
+-- Ketidakleluasaan untuk tabel pelimpahan (Dumped Tables)
+--
+
+--
+-- Ketidakleluasaan untuk tabel `peminjaman`
+--
+ALTER TABLE `peminjaman`
+  ADD CONSTRAINT `peminjaman_ibfk_1` FOREIGN KEY (`id_anggota`) REFERENCES `data_anggota` (`id_anggota`),
+  ADD CONSTRAINT `peminjaman_ibfk_2` FOREIGN KEY (`id_buku`) REFERENCES `data_buku` (`id_buku`);
+
+--
+-- Ketidakleluasaan untuk tabel `pengembalian`
+--
+ALTER TABLE `pengembalian`
+  ADD CONSTRAINT `pengembalian_ibfk_1` FOREIGN KEY (`id_peminjaman`) REFERENCES `peminjaman` (`id_peminjaman`);
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
