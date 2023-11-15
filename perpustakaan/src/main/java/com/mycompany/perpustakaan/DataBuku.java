@@ -13,30 +13,58 @@ import java.sql.SQLException;
  * @author HP
  */
 public class DataBuku {
-    static void create(){
+    static void create(String id, String nama, String kategori, String penulis, String stock){
         try{
             DatabaseConnection dbConnection = DatabaseConnection.getInstance();
             Connection connection = dbConnection.getConnection();
-            String query = "INSERT INTO anggota (nama, nim, prodi) VALUES (?, ?, ?)";
+            String query = "INSERT INTO data_buku (id_buku, nama, kategori, penulis, stock) VALUES (?, ?, ?, ?, ?)";
             PreparedStatement statement = connection.prepareStatement(query);
 
-            System.out.print("Masukan nama: ");
-            String nama = scan.next();
+            statement.setString(1, id);
+            statement.setString(2, nama);
+            statement.setString(3, kategori);
+            statement.setString(4, penulis);
+            statement.setString(5, stock);
+            
+            statement.executeUpdate();
+            statement.close();
+            } catch (SQLException e) {
+            e.printStackTrace();
+        }
+    }
+    static void delete(String id){
+        try{
+            DatabaseConnection dbConnection = DatabaseConnection.getInstance();
+            Connection connection = dbConnection.getConnection();
+            String query = "DELETE FROM data_buku WHERE id_buku = ?";
+            PreparedStatement statement = connection.prepareStatement(query);
+            
+            statement.setString(1, id);
+            
+            statement.executeUpdate();
+            statement.close();
+        } catch (SQLException e) {
+        e.printStackTrace();
+        }
+    }
+    static void update(String id, String nama, String kategori, String penulis, String stock){
+        try{
+            DatabaseConnection dbConnection = DatabaseConnection.getInstance();
+            Connection connection = dbConnection.getConnection();
+            String query = "UPDATE data_buku SET nama = ?, kategori = ?,penulis = ?,stock= ? WHERE id_buku = ?";
+            PreparedStatement statement = connection.prepareStatement(query);
+
+            statement.setString(5, id);
             statement.setString(1, nama);
-
-            System.out.print("Masukan NIM: ");
-            String nim = scan.next();
-            statement.setString(2, nim);
-
-            System.out.print("Masukan prodi: ");
-            String prodi = scan.next();
-            statement.setString(3, prodi);
+            statement.setString(2, kategori);
+            statement.setString(3, penulis);
+            statement.setString(4, stock);
 
             statement.executeUpdate();
             statement.close();
-            System.out.println("Data berhasil dibuat");
-            } catch (SQLException e) {
-            e.printStackTrace();
+            System.out.println("Data berhasil diubah");
+        } catch (SQLException e) {
+        e.printStackTrace();
         }
     }
 }
