@@ -40,6 +40,11 @@ public class PenyimpananBuku extends javax.swing.JFrame {
 
         tambahBukuButton.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
         tambahBukuButton.setText("Tambah Buku");
+        tambahBukuButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                tambahBukuButtonActionPerformed(evt);
+            }
+        });
 
         listBukuButton.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
         listBukuButton.setText("List Buku");
@@ -51,12 +56,27 @@ public class PenyimpananBuku extends javax.swing.JFrame {
 
         hapusBukuButton.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
         hapusBukuButton.setText("Hapus Buku");
+        hapusBukuButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                hapusBukuButtonActionPerformed(evt);
+            }
+        });
 
         updateBukuButton.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
         updateBukuButton.setText("Update Buku");
+        updateBukuButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                updateBukuButtonActionPerformed(evt);
+            }
+        });
 
         jButton2.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
         jButton2.setText("Kembali");
+        jButton2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton2ActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -103,6 +123,34 @@ public class PenyimpananBuku extends javax.swing.JFrame {
     private void listBukuButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_listBukuButtonActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_listBukuButtonActionPerformed
+
+    private void tambahBukuButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tambahBukuButtonActionPerformed
+        // TODO add your handling code here:
+        TambahBuku a = new TambahBuku();
+        this.dispose();
+        a.setVisible(true);
+    }//GEN-LAST:event_tambahBukuButtonActionPerformed
+
+    private void hapusBukuButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_hapusBukuButtonActionPerformed
+        // TODO add your handling code here:
+        HapusBuku a = new HapusBuku();
+        this.dispose();
+        a.setVisible(true);
+    }//GEN-LAST:event_hapusBukuButtonActionPerformed
+
+    private void updateBukuButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_updateBukuButtonActionPerformed
+        // TODO add your handling code here:
+        UpdateBuku a = new UpdateBuku();
+        this.dispose();
+        a.setVisible(true);
+    }//GEN-LAST:event_updateBukuButtonActionPerformed
+
+    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+        // TODO add your handling code here:
+        MainMenu a = new MainMenu();
+        this.dispose();
+        a.setVisible(true);
+    }//GEN-LAST:event_jButton2ActionPerformed
 
     /**
      * @param args the command line arguments

@@ -32,6 +32,7 @@ public class Keanggotaan extends javax.swing.JFrame {
         hapusAnggota = new javax.swing.JButton();
         updateAnggota = new javax.swing.JButton();
         listAnggota = new javax.swing.JButton();
+        jButton1 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -40,24 +41,43 @@ public class Keanggotaan extends javax.swing.JFrame {
 
         daftarAnggota.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
         daftarAnggota.setText("Daftar Anggota Baru");
+        daftarAnggota.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                daftarAnggotaActionPerformed(evt);
+            }
+        });
 
         hapusAnggota.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
         hapusAnggota.setText("Hapus Anggota");
+        hapusAnggota.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                hapusAnggotaActionPerformed(evt);
+            }
+        });
 
         updateAnggota.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
         updateAnggota.setText("Update Anggota");
+        updateAnggota.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                updateAnggotaActionPerformed(evt);
+            }
+        });
 
         listAnggota.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
         listAnggota.setText("List Anggota");
+
+        jButton1.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        jButton1.setText("Kembali");
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(126, 126, 126)
-                .addComponent(jLabel1)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
                 .addContainerGap(108, Short.MAX_VALUE)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
@@ -66,6 +86,15 @@ public class Keanggotaan extends javax.swing.JFrame {
                     .addComponent(daftarAnggota)
                     .addComponent(updateAnggota, javax.swing.GroupLayout.PREFERRED_SIZE, 194, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(98, 98, 98))
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGap(126, 126, 126)
+                        .addComponent(jLabel1))
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addContainerGap()
+                        .addComponent(jButton1)))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -80,7 +109,9 @@ public class Keanggotaan extends javax.swing.JFrame {
                 .addComponent(updateAnggota)
                 .addGap(18, 18, 18)
                 .addComponent(hapusAnggota)
-                .addContainerGap(60, Short.MAX_VALUE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 22, Short.MAX_VALUE)
+                .addComponent(jButton1)
+                .addContainerGap())
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -96,6 +127,34 @@ public class Keanggotaan extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void daftarAnggotaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_daftarAnggotaActionPerformed
+        // TODO add your handling code here:
+        DaftarAnggotaBaru a = new DaftarAnggotaBaru();
+        this.dispose();
+        a.setVisible(true);
+    }//GEN-LAST:event_daftarAnggotaActionPerformed
+
+    private void updateAnggotaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_updateAnggotaActionPerformed
+        // TODO add your handling code here:
+        UpdateAnggota a = new UpdateAnggota();
+        this.dispose();
+        a.setVisible(true);
+    }//GEN-LAST:event_updateAnggotaActionPerformed
+
+    private void hapusAnggotaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_hapusAnggotaActionPerformed
+        // TODO add your handling code here:
+        HapusAnggota a = new HapusAnggota();
+        this.dispose();
+        a.setVisible(true);
+    }//GEN-LAST:event_hapusAnggotaActionPerformed
+
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        // TODO add your handling code here:
+        MainMenu a = new MainMenu();
+        this.dispose();
+        a.setVisible(true);
+    }//GEN-LAST:event_jButton1ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -135,6 +194,8 @@ public class Keanggotaan extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton daftarAnggota;
     private javax.swing.JButton hapusAnggota;
+    private javax.swing.JButton jButton1;
+    private javax.swing.JButton jButton5;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JButton listAnggota;
