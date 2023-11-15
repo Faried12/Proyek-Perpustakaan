@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Waktu pembuatan: 13 Nov 2023 pada 13.24
+-- Waktu pembuatan: 15 Nov 2023 pada 16.59
 -- Versi server: 10.4.28-MariaDB
 -- Versi PHP: 8.2.4
 
@@ -84,6 +84,14 @@ CREATE TABLE `peminjaman` (
   `id_buku` varchar(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
+--
+-- Dumping data untuk tabel `peminjaman`
+--
+
+INSERT INTO `peminjaman` (`id_peminjaman`, `tanggal_peminjaman`, `pengembalian`, `id_anggota`, `id_buku`) VALUES
+('M1123001', '2023-11-14', 1, 'A000003', 'B000003'),
+('M1123002', '2023-11-15', 0, 'A000001', 'B000005');
+
 -- --------------------------------------------------------
 
 --
@@ -96,6 +104,13 @@ CREATE TABLE `pengembalian` (
   `denda` int(11) NOT NULL,
   `id_peminjaman` varchar(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data untuk tabel `pengembalian`
+--
+
+INSERT INTO `pengembalian` (`id_pengembalian`, `tanggal_pengembalian`, `denda`, `id_peminjaman`) VALUES
+('B1123001', '2023-11-15', 0, 'M1123001');
 
 --
 -- Indexes for dumped tables
