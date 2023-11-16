@@ -66,7 +66,7 @@ public class generate {
         int days = (int) daysDifference;
         if (days > 5){
             int denda = days * 1000;
-            return String.valueOf(days);
+            return String.valueOf(denda);
         }else{
             return "0";
         }

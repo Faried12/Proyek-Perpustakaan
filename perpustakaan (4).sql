@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Waktu pembuatan: 15 Nov 2023 pada 16.59
+-- Waktu pembuatan: 16 Nov 2023 pada 20.08
 -- Versi server: 10.4.28-MariaDB
 -- Versi PHP: 8.2.4
 
@@ -41,9 +41,9 @@ CREATE TABLE `data_anggota` (
 --
 
 INSERT INTO `data_anggota` (`id_anggota`, `nama`, `jenis_kelamin`, `tanggal_lahir`, `alamat`, `no_telpon`) VALUES
-('A000001', 'Bangun Panduko Johan', 1, '2004-05-12', 'Puncangan', '085921595619'),
-('A000002', 'Muhammad Farid Saputra', 1, '2004-01-12', 'Mahamhaji', '082268597785'),
-('A000003', 'Muhammad Ilyas', 1, '2004-03-27', 'Makamhaji', '087733625013');
+('A0001', 'Bangun Panduko Johan', 1, '2004-05-12', 'Puncangan', '085921595619'),
+('A0002', 'Muhammad Farid Saputra', 1, '2004-01-12', 'Mahamhaji', '082268597785'),
+('A0003', 'Muhammad Ilyas', 1, '2004-03-27', 'Makamhaji', '087733625013');
 
 -- --------------------------------------------------------
 
@@ -53,22 +53,21 @@ INSERT INTO `data_anggota` (`id_anggota`, `nama`, `jenis_kelamin`, `tanggal_lahi
 
 CREATE TABLE `data_buku` (
   `id_buku` varchar(11) NOT NULL,
-  `nama` varchar(255) NOT NULL,
+  `judul` varchar(255) NOT NULL,
   `kategori` varchar(255) NOT NULL,
-  `penulis` varchar(255) NOT NULL,
-  `stock` int(255) NOT NULL
+  `penulis` varchar(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Dumping data untuk tabel `data_buku`
 --
 
-INSERT INTO `data_buku` (`id_buku`, `nama`, `kategori`, `penulis`, `stock`) VALUES
-('B000001', 'One Piece 100', 'komik', 'Eiichiro Oda', 5),
-('B000002', 'Koala Kumal', 'Novel', 'Raditya Dika', 5),
-('B000003', 'Dasar-Dasar Teknik Informatika', 'Jurnal', 'Novega Pratama Adiputra', 3),
-('B000004', 'Berserk vol.1', 'Komik', 'Kentaro Miura', 5),
-('B000005', 'Laskar Pelangi', 'novel', 'Andrea Hirata', 3);
+INSERT INTO `data_buku` (`id_buku`, `judul`, `kategori`, `penulis`) VALUES
+('B10001', 'One Piece 100', 'Komik', 'Eiichiro Oda'),
+('B10002', 'Berserk vol.1', 'Komik', 'Kentaro Miura'),
+('B20001', 'Koala Kumal', 'Novel', 'Raditya Dika'),
+('B20002', 'Laskar Pelangi', 'Novel', 'Andrea Hirata'),
+('B30001', 'Dasar-Dasar Teknik Informatika', 'Jurnal', 'Novega Pratama Adiputra');
 
 -- --------------------------------------------------------
 
@@ -89,8 +88,9 @@ CREATE TABLE `peminjaman` (
 --
 
 INSERT INTO `peminjaman` (`id_peminjaman`, `tanggal_peminjaman`, `pengembalian`, `id_anggota`, `id_buku`) VALUES
-('M1123001', '2023-11-14', 1, 'A000003', 'B000003'),
-('M1123002', '2023-11-15', 0, 'A000001', 'B000005');
+('M23110001', '2023-11-14', 1, 'A0002', 'B30001'),
+('M23110002', '2023-11-15', 0, 'A0003', 'B10001'),
+('M2311003', '2023-11-17', 1, 'A0002', 'B20002');
 
 -- --------------------------------------------------------
 
@@ -110,7 +110,7 @@ CREATE TABLE `pengembalian` (
 --
 
 INSERT INTO `pengembalian` (`id_pengembalian`, `tanggal_pengembalian`, `denda`, `id_peminjaman`) VALUES
-('B1123001', '2023-11-15', 0, 'M1123001');
+('K23110001', '2023-11-15', 0, 'M23110001');
 
 --
 -- Indexes for dumped tables

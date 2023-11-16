@@ -44,9 +44,7 @@ public class PengembalianBuku {
                 pstatement.setString(1, id_pengembalian);
                 pstatement.setString(2, tanggal);
                 pstatement.setString(3, denda);
-                pstatement.setString(4, id);
-                
-                
+                pstatement.setString(4, id);  
             }      
             statement.close();
             } catch (SQLException e) {
