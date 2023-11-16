@@ -32,8 +32,8 @@ public class PengembalianBuku {
                 dbid = rs.getString("id_buku");
             }
             if (id == dbid){
-                String pquery = "INSERT INTO pengembalian (id_pengembalian, tanggal_pengembalian, denda, id_peminjaman) VALUES (?, ?, ?, ?)";
-                PreparedStatement pstatement = connection.prepareStatement(pquery);
+                query = "INSERT INTO pengembalian (id_pengembalian, tanggal_pengembalian, denda, id_peminjaman) VALUES (?, ?, ?, ?)";
+                PreparedStatement pstatement = connection.prepareStatement(query);
                 
                 String num = generate.numId(25);
                 String tgl = generate.date(tanggal);
@@ -45,9 +45,12 @@ public class PengembalianBuku {
                 pstatement.setString(2, tanggal);
                 pstatement.setString(3, denda);
                 pstatement.setString(4, id);  
+                
+                query = "UPDATE peminjaman SET pengembalian = '1' WHERE peminjaman.id_peminjaman = 'M23110002';";
+                statement.executeQuery(query);
             }      
             statement.close();
-            } catch (SQLException e) {
+            } catch (SQLException e){
             e.printStackTrace();
         }
     }
