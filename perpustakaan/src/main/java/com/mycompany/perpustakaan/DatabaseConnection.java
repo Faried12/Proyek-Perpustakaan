@@ -32,7 +32,7 @@ public class DatabaseConnection {
     // Public method to get a database connection
     public Connection getConnection() throws SQLException {
         // Here, you can configure your database connection parameters
-        String url = "jdbc:mysql://localhost:3306/perpus";
+        String url = "jdbc:mysql://localhost:3306/perpustakaan";
         String username = "root";
         String password = "";
 

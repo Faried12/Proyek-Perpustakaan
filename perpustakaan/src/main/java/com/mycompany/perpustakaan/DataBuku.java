@@ -13,7 +13,7 @@ import java.sql.SQLException;
  * @author HP
  */
 public class DataBuku {
-    static void create(String id, String nama, String kategori, String penulis, String stock){
+    static void tambah(String id, String nama, String kategori, String penulis, String stock){
         try{
             DatabaseConnection dbConnection = DatabaseConnection.getInstance();
             Connection connection = dbConnection.getConnection();
@@ -32,7 +32,7 @@ public class DataBuku {
             e.printStackTrace();
         }
     }
-    static void delete(String id){
+    static void hapus(String id){
         try{
             DatabaseConnection dbConnection = DatabaseConnection.getInstance();
             Connection connection = dbConnection.getConnection();
