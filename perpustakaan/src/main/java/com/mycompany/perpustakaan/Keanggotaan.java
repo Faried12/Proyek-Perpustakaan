@@ -65,6 +65,11 @@ public class Keanggotaan extends javax.swing.JFrame {
 
         listAnggota.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
         listAnggota.setText("List Anggota");
+        listAnggota.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                listAnggotaActionPerformed(evt);
+            }
+        });
 
         jButton1.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
         jButton1.setText("Kembali");
@@ -156,6 +161,12 @@ public class Keanggotaan extends javax.swing.JFrame {
         a.setVisible(true);
     }//GEN-LAST:event_jButton1ActionPerformed
 
+    private void listAnggotaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_listAnggotaActionPerformed
+        ListAnggota a = new ListAnggota();
+        this.dispose();
+        a.setVisible(true);
+    }//GEN-LAST:event_listAnggotaActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -195,7 +206,6 @@ public class Keanggotaan extends javax.swing.JFrame {
     private javax.swing.JButton daftarAnggota;
     private javax.swing.JButton hapusAnggota;
     private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton5;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JButton listAnggota;
