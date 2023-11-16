@@ -52,7 +52,6 @@
                                       <Component id="jLabel10" alignment="0" min="-2" max="-2" attributes="0"/>
                                       <Component id="jLabel11" alignment="0" min="-2" max="-2" attributes="0"/>
                                       <Component id="jLabel14" alignment="0" min="-2" max="-2" attributes="0"/>
-                                      <Component id="jLabel12" alignment="0" min="-2" max="-2" attributes="0"/>
                                   </Group>
                               </Group>
                               <Group type="102" alignment="0" attributes="0">
@@ -63,10 +62,9 @@
                           <EmptySpace min="-2" pref="40" max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="0" attributes="0">
                               <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                                  <Component id="stockTambahBuku" alignment="0" max="32767" attributes="0"/>
-                                  <Component id="kategoriTambahBuku" alignment="0" max="32767" attributes="0"/>
-                                  <Component id="judulTambahBuku" alignment="0" max="32767" attributes="0"/>
-                                  <Component id="penulisTambahBuku" alignment="0" min="-2" pref="193" max="-2" attributes="0"/>
+                                  <Component id="kategori" alignment="0" max="32767" attributes="0"/>
+                                  <Component id="judul" alignment="0" max="32767" attributes="0"/>
+                                  <Component id="penulis" alignment="0" min="-2" pref="193" max="-2" attributes="0"/>
                               </Group>
                               <Component id="jButton2" min="-2" max="-2" attributes="0"/>
                           </Group>
@@ -89,20 +87,16 @@
                           <Component id="jLabel11" min="-2" max="-2" attributes="0"/>
                           <EmptySpace type="unrelated" max="-2" attributes="0"/>
                           <Component id="jLabel14" min="-2" max="-2" attributes="0"/>
-                          <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                          <Component id="jLabel12" min="-2" max="-2" attributes="0"/>
                       </Group>
                       <Group type="102" attributes="0">
-                          <Component id="judulTambahBuku" min="-2" max="-2" attributes="0"/>
+                          <Component id="judul" min="-2" max="-2" attributes="0"/>
                           <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                          <Component id="kategoriTambahBuku" min="-2" max="-2" attributes="0"/>
+                          <Component id="kategori" min="-2" max="-2" attributes="0"/>
                           <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                          <Component id="penulisTambahBuku" min="-2" max="-2" attributes="0"/>
-                          <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                          <Component id="stockTambahBuku" min="-2" max="-2" attributes="0"/>
+                          <Component id="penulis" min="-2" max="-2" attributes="0"/>
                       </Group>
                   </Group>
-                  <EmptySpace pref="80" max="32767" attributes="0"/>
+                  <EmptySpace pref="114" max="32767" attributes="0"/>
                   <Component id="jButton2" min="-2" max="-2" attributes="0"/>
                   <EmptySpace min="-2" pref="10" max="-2" attributes="0"/>
               </Group>
@@ -131,7 +125,10 @@
             <Property name="text" type="java.lang.String" value="Judul Buku"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JTextField" name="judulTambahBuku">
+        <Component class="javax.swing.JTextField" name="judul">
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="judulActionPerformed"/>
+          </Events>
         </Component>
         <Component class="javax.swing.JButton" name="jButton2">
           <Properties>
@@ -140,8 +137,11 @@
             </Property>
             <Property name="text" type="java.lang.String" value="OK"/>
           </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButton2ActionPerformed"/>
+          </Events>
         </Component>
-        <Component class="javax.swing.JTextField" name="kategoriTambahBuku">
+        <Component class="javax.swing.JTextField" name="kategori">
         </Component>
         <Component class="javax.swing.JLabel" name="jLabel11">
           <Properties>
@@ -151,16 +151,6 @@
             <Property name="text" type="java.lang.String" value="Kategori"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JLabel" name="jLabel12">
-          <Properties>
-            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-              <Font name="Segoe UI" size="16" style="0"/>
-            </Property>
-            <Property name="text" type="java.lang.String" value="Stock"/>
-          </Properties>
-        </Component>
-        <Component class="javax.swing.JTextField" name="stockTambahBuku">
-        </Component>
         <Component class="javax.swing.JLabel" name="jLabel14">
           <Properties>
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
@@ -169,7 +159,7 @@
             <Property name="text" type="java.lang.String" value="Penulis"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JTextField" name="penulisTambahBuku">
+        <Component class="javax.swing.JTextField" name="penulis">
         </Component>
         <Component class="javax.swing.JButton" name="jButton3">
           <Properties>

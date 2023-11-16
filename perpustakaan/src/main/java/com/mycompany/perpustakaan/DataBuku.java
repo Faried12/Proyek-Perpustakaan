@@ -14,11 +14,11 @@ import java.sql.SQLException;
  * @author HP
  */
 public class DataBuku {
-    static void tambah(String nama, String kategori, String penulis, String stock) throws IOException{
+    static void tambah(String judul, String kategori, String penulis) throws IOException{
         try{
             DatabaseConnection dbConnection = DatabaseConnection.getInstance();
             Connection connection = dbConnection.getConnection();
-            String query = "INSERT INTO data_buku (id_buku, nama, kategori, penulis, stock) VALUES (?, ?, ?, ?, ?)";
+            String query = "INSERT INTO data_buku (id_buku, nama, kategori, penulis) VALUES (?, ?, ?, ?)";
             PreparedStatement statement = connection.prepareStatement(query);
 
             String id = null;
@@ -34,10 +34,9 @@ public class DataBuku {
             }
             
             statement.setString(1, id);
-            statement.setString(2, nama);
+            statement.setString(2, judul);
             statement.setString(3, kategori);
             statement.setString(4, penulis);
-            statement.setString(5, stock);
             
             statement.executeUpdate();
             statement.close();
@@ -60,18 +59,17 @@ public class DataBuku {
         e.printStackTrace();
         }
     }
-    static void update(String id, String nama, String kategori, String penulis, String stock){
+    static void update(String id, String judul, String kategori, String penulis){
         try{
             DatabaseConnection dbConnection = DatabaseConnection.getInstance();
             Connection connection = dbConnection.getConnection();
-            String query = "UPDATE data_buku SET nama = ?, kategori = ?,penulis = ?,stock= ? WHERE id_buku = ?";
+            String query = "UPDATE data_buku SET nama = ?, kategori = ?,penulis = ? WHERE id_buku = ?";
             PreparedStatement statement = connection.prepareStatement(query);
 
-            statement.setString(5, id);
-            statement.setString(1, nama);
+            statement.setString(4, id);
+            statement.setString(1, judul);
             statement.setString(2, kategori);
             statement.setString(3, penulis);
-            statement.setString(4, stock);
 
             statement.executeUpdate();
             statement.close();
