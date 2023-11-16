@@ -122,6 +122,9 @@ public class PenyimpananBuku extends javax.swing.JFrame {
 
     private void listBukuButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_listBukuButtonActionPerformed
         // TODO add your handling code here:
+        ListBuku a = new ListBuku();
+        this.dispose();
+        a.setVisible(true);
     }//GEN-LAST:event_listBukuButtonActionPerformed
 
     private void tambahBukuButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tambahBukuButtonActionPerformed
