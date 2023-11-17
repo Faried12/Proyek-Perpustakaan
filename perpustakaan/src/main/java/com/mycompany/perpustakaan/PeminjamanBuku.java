@@ -24,18 +24,19 @@ public class PeminjamanBuku {
             String tanggal = date.toString();
             DatabaseConnection dbConnection = DatabaseConnection.getInstance();
             Connection connection = dbConnection.getConnection();
-            Statement statement = connection.createStatement();
             String pquery = "INSERT INTO peminjaman (id_peminjaman, tanggal_peminjaman, pengembalian, id_anggota, id_buku) VALUES (?, ?, 0, ?,?)";
-            PreparedStatement pstatement = connection.prepareStatement(pquery);
+            PreparedStatement statement = connection.prepareStatement(pquery);
             
             String num = generate.numId(20);
             String tgl = generate.date(tanggal);
             String id_peminjaman = "M" + tgl + num ;
 
-            pstatement.setString(1, id_peminjaman);
-            pstatement.setString(2, tanggal);
-            pstatement.setString(3, anggota);
-            pstatement.setString(4, buku);         
+            statement.setString(1, id_peminjaman);
+            statement.setString(2, tanggal);
+            statement.setString(3, anggota);
+            statement.setString(4, buku); 
+            
+            statement.executeUpdate();
             statement.close();
             } catch (SQLException e) {
             e.printStackTrace();

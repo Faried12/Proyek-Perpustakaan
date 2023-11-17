@@ -38,6 +38,7 @@ public class TambahPeminjaman extends javax.swing.JFrame {
         anggota = new javax.swing.JTextField();
         buku = new javax.swing.JTextField();
         jButton2 = new javax.swing.JButton();
+        announcer = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -66,6 +67,9 @@ public class TambahPeminjaman extends javax.swing.JFrame {
             }
         });
 
+        announcer.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        announcer.setText("    ");
+
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
@@ -90,6 +94,10 @@ public class TambahPeminjaman extends javax.swing.JFrame {
                         .addGap(94, 94, 94)
                         .addComponent(jButton1)))
                 .addContainerGap())
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                .addGap(0, 0, Short.MAX_VALUE)
+                .addComponent(announcer)
+                .addGap(219, 219, 219))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -104,7 +112,9 @@ public class TambahPeminjaman extends javax.swing.JFrame {
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel4)
                     .addComponent(anggota, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(158, 158, 158)
+                .addGap(130, 130, 130)
+                .addComponent(announcer)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jButton1)
                     .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE))
@@ -136,6 +146,7 @@ public class TambahPeminjaman extends javax.swing.JFrame {
         try {
             // TODO add your handling code here:
             PeminjamanBuku.tambah(anggota.getText(), buku.getText());
+            announcer.setText("Proses Selesai");
         } catch (IOException ex) {
             Logger.getLogger(TambahPeminjaman.class.getName()).log(Level.SEVERE, null, ex);
         }
@@ -178,6 +189,7 @@ public class TambahPeminjaman extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JTextField anggota;
+    private javax.swing.JLabel announcer;
     private javax.swing.JTextField buku;
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;

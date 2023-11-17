@@ -26,12 +26,14 @@ public class PengembalianBuku {
             DatabaseConnection dbConnection = DatabaseConnection.getInstance();
             Connection connection = dbConnection.getConnection();
             Statement statement = connection.createStatement();
-            String query = "SELECT * FROM data_buku WHERE id_buku = '"+id+"';";
+            String query = "SELECT * FROM peminjaman WHERE id_peminjaman = '"+id+"';";
             ResultSet rs = statement.executeQuery(query);
             while (rs.next()) {
-                dbid = rs.getString("id_buku");
+                dbid = rs.getString("id_peminjaman");
             }
-            if (id == dbid){
+            System.out.println(id.getClass().getName());
+            System.out.println(dbid.getClass().getName());
+            if (id.equals(dbid)){
                 query = "INSERT INTO pengembalian (id_pengembalian, tanggal_pengembalian, denda, id_peminjaman) VALUES (?, ?, ?, ?)";
                 PreparedStatement pstatement = connection.prepareStatement(query);
                 
@@ -46,8 +48,13 @@ public class PengembalianBuku {
                 pstatement.setString(3, denda);
                 pstatement.setString(4, id);  
                 
-                query = "UPDATE peminjaman SET pengembalian = '1' WHERE peminjaman.id_peminjaman = 'M23110002';";
-                statement.executeQuery(query);
+                pstatement.executeUpdate();
+                
+                query = "UPDATE peminjaman SET pengembalian = '1' WHERE peminjaman.id_peminjaman = '"+id+"';";
+                statement.executeUpdate(query);
+                
+                pstatement.close();
+                statement.close();
             }      
             statement.close();
             } catch (SQLException e){

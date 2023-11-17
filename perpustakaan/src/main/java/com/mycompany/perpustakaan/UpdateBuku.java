@@ -33,11 +33,12 @@ public class UpdateBuku extends javax.swing.JFrame {
         judul = new javax.swing.JTextField();
         ID = new javax.swing.JTextField();
         jButton2 = new javax.swing.JButton();
-        kategori = new javax.swing.JTextField();
         jLabel11 = new javax.swing.JLabel();
         jLabel14 = new javax.swing.JLabel();
         penulis = new javax.swing.JTextField();
         jButton4 = new javax.swing.JButton();
+        kategori = new javax.swing.JComboBox<>();
+        announcer = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -71,21 +72,15 @@ public class UpdateBuku extends javax.swing.JFrame {
             }
         });
 
+        kategori.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Komik", "Novel", "Jurnal", "Other" }));
+
+        announcer.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        announcer.setText("    ");
+
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addContainerGap()
-                        .addComponent(jButton4)
-                        .addGap(81, 81, 81)
-                        .addComponent(jButton2))
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(83, 83, 83)
-                        .addComponent(jLabel8)))
-                .addContainerGap(123, Short.MAX_VALUE))
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addGap(45, 45, 45)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -95,11 +90,25 @@ public class UpdateBuku extends javax.swing.JFrame {
                     .addComponent(jLabel14))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(kategori, javax.swing.GroupLayout.DEFAULT_SIZE, 193, Short.MAX_VALUE)
-                    .addComponent(judul)
+                    .addComponent(judul, javax.swing.GroupLayout.DEFAULT_SIZE, 193, Short.MAX_VALUE)
                     .addComponent(ID)
-                    .addComponent(penulis))
+                    .addComponent(penulis)
+                    .addComponent(kategori, javax.swing.GroupLayout.Alignment.TRAILING, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addGap(58, 58, 58))
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addContainerGap()
+                        .addComponent(jButton4)
+                        .addGap(81, 81, 81)
+                        .addComponent(jButton2))
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGap(83, 83, 83)
+                        .addComponent(jLabel8))
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGap(193, 193, 193)
+                        .addComponent(announcer)))
+                .addContainerGap(123, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -122,7 +131,9 @@ public class UpdateBuku extends javax.swing.JFrame {
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel14)
                     .addComponent(penulis, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 76, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 42, Short.MAX_VALUE)
+                .addComponent(announcer)
+                .addGap(18, 18, 18)
                 .addComponent(jButton2)
                 .addGap(10, 10, 10))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
@@ -154,7 +165,8 @@ public class UpdateBuku extends javax.swing.JFrame {
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
         // TODO add your handling code here:
-        DataBuku.update(ID.getText(), judul.getText(), kategori.getText(), penulis.getText());
+        DataBuku.update(ID.getText(), judul.getText(), kategori.getSelectedItem().toString(), penulis.getText());
+        announcer.setText("Proses Selesai");
     }//GEN-LAST:event_jButton2ActionPerformed
 
     /**
@@ -194,6 +206,7 @@ public class UpdateBuku extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JTextField ID;
+    private javax.swing.JLabel announcer;
     private javax.swing.JButton jButton2;
     private javax.swing.JButton jButton4;
     private javax.swing.JLabel jLabel10;
@@ -203,7 +216,7 @@ public class UpdateBuku extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel9;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JTextField judul;
-    private javax.swing.JTextField kategori;
+    private javax.swing.JComboBox<String> kategori;
     private javax.swing.JTextField penulis;
     // End of variables declaration//GEN-END:variables
 }

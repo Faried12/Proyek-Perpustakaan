@@ -18,7 +18,7 @@ public class DataBuku {
         try{
             DatabaseConnection dbConnection = DatabaseConnection.getInstance();
             Connection connection = dbConnection.getConnection();
-            String query = "INSERT INTO data_buku (id_buku, nama, kategori, penulis) VALUES (?, ?, ?, ?)";
+            String query = "INSERT INTO data_buku (id_buku, judul, kategori, penulis) VALUES (?, ?, ?, ?)";
             PreparedStatement statement = connection.prepareStatement(query);
 
             String id = null;
@@ -63,7 +63,7 @@ public class DataBuku {
         try{
             DatabaseConnection dbConnection = DatabaseConnection.getInstance();
             Connection connection = dbConnection.getConnection();
-            String query = "UPDATE data_buku SET nama = ?, kategori = ?,penulis = ? WHERE id_buku = ?";
+            String query = "UPDATE data_buku SET judul = ?, kategori = ?,penulis = ? WHERE id_buku = ?";
             PreparedStatement statement = connection.prepareStatement(query);
 
             statement.setString(4, id);
@@ -73,7 +73,6 @@ public class DataBuku {
 
             statement.executeUpdate();
             statement.close();
-            System.out.println("Data berhasil diubah");
         } catch (SQLException e) {
         e.printStackTrace();
         }

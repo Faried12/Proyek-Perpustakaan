@@ -39,11 +39,10 @@ public class ListPeminjaman extends javax.swing.JFrame {
             while (rs.next()) {
                 String id = rs.getString("id_peminjaman");
                 String tanggal_peminjaman = rs.getString("tanggal_peminjaman");
-                String pengembalian = rs.getString("pengembalian");
                 String id_anggota = rs.getString("id_anggota");
                 String id_buku = rs.getString("id_buku");
                 
-                Object obj [] = {id, tanggal_peminjaman, pengembalian, id_anggota, id_buku};
+                Object obj [] = {id, tanggal_peminjaman, id_anggota, id_buku};
                 model.addRow(obj);
             }
 

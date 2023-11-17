@@ -1,3 +1,4 @@
+com\mycompany\perpustakaan\UpdateBuku$3.class
 com\mycompany\perpustakaan\MainMenu$2.class
 com\mycompany\perpustakaan\DaftarAnggotaBaru$1.class
 com\mycompany\perpustakaan\ListPeminjaman$1.class
@@ -25,15 +26,18 @@ com\mycompany\perpustakaan\generate.class
 com\mycompany\perpustakaan\MainMenu$3.class
 com\mycompany\perpustakaan\PengembalianBuku.class
 com\mycompany\perpustakaan\Keanggotaan$2.class
+com\mycompany\perpustakaan\TambahBuku$4.class
 com\mycompany\perpustakaan\Pengembalian$2.class
 com\mycompany\perpustakaan\UpdateAnggota$1.class
 com\mycompany\perpustakaan\UpdateBuku.class
 com\mycompany\perpustakaan\ListPengembalian$3.class
 com\mycompany\perpustakaan\ListBuku.class
 com\mycompany\perpustakaan\ListBuku$1.class
+com\mycompany\perpustakaan\DaftarAnggotaBaru$3.class
 com\mycompany\perpustakaan\PenyimpananBuku$5.class
 com\mycompany\perpustakaan\PenyimpananBuku$2.class
 com\mycompany\perpustakaan\TambahBuku.class
+com\mycompany\perpustakaan\TambahPeminjaman$3.class
 com\mycompany\perpustakaan\UpdateBuku$2.class
 com\mycompany\perpustakaan\DataAnggota.class
 com\mycompany\perpustakaan\Keanggotaan.class
@@ -42,10 +46,13 @@ com\mycompany\perpustakaan\HapusBuku$2.class
 com\mycompany\perpustakaan\TambahBuku$2.class
 com\mycompany\perpustakaan\DaftarAnggotaBaru.class
 com\mycompany\perpustakaan\Keanggotaan$3.class
+com\mycompany\perpustakaan\Keanggotaan$6.class
 com\mycompany\perpustakaan\Peminjaman$1.class
 com\mycompany\perpustakaan\Peminjaman.class
+com\mycompany\perpustakaan\HapusAnggota$2.class
 com\mycompany\perpustakaan\ListAnggota$3.class
 com\mycompany\perpustakaan\ListPeminjaman$3.class
+com\mycompany\perpustakaan\UpdateAnggota$3.class
 com\mycompany\perpustakaan\TambahPengembalian$2.class
 com\mycompany\perpustakaan\MainMenu$4.class
 com\mycompany\perpustakaan\DatabaseConnection.class
@@ -63,6 +70,8 @@ com\mycompany\perpustakaan\ListAnggota$2.class
 com\mycompany\perpustakaan\ListPeminjaman$2.class
 com\mycompany\perpustakaan\Pengembalian$3.class
 com\mycompany\perpustakaan\UpdateAnggota$2.class
+com\mycompany\perpustakaan\HapusBuku$3.class
+com\mycompany\perpustakaan\TambahBuku$3.class
 com\mycompany\perpustakaan\ListPeminjaman.class
 com\mycompany\perpustakaan\TambahPeminjaman.class
 com\mycompany\perpustakaan\HapusAnggota.class
@@ -70,6 +79,8 @@ com\mycompany\perpustakaan\Keanggotaan$4.class
 com\mycompany\perpustakaan\Peminjaman$3.class
 com\mycompany\perpustakaan\ListAnggota.class
 com\mycompany\perpustakaan\ListBuku$3.class
+com\mycompany\perpustakaan\HapusAnggota$3.class
 com\mycompany\perpustakaan\ListPengembalian$1.class
 com\mycompany\perpustakaan\MainMenu.class
+com\mycompany\perpustakaan\TambahPengembalian$3.class
 com\mycompany\perpustakaan\MainMenu$5.class

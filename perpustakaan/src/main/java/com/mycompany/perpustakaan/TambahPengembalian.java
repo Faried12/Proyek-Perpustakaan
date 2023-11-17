@@ -36,6 +36,7 @@ public class TambahPengembalian extends javax.swing.JFrame {
         jButton2 = new javax.swing.JButton();
         ID = new javax.swing.JTextField();
         jButton3 = new javax.swing.JButton();
+        announcer = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -61,6 +62,9 @@ public class TambahPengembalian extends javax.swing.JFrame {
             }
         });
 
+        announcer.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        announcer.setText("    ");
+
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
         jPanel2Layout.setHorizontalGroup(
@@ -80,8 +84,13 @@ public class TambahPengembalian extends javax.swing.JFrame {
                 .addContainerGap())
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
                 .addGap(0, 64, Short.MAX_VALUE)
-                .addComponent(jLabel8)
-                .addGap(57, 57, 57))
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
+                        .addComponent(jLabel8)
+                        .addGap(57, 57, 57))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
+                        .addComponent(announcer)
+                        .addGap(190, 190, 190))))
         );
         jPanel2Layout.setVerticalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -92,7 +101,9 @@ public class TambahPengembalian extends javax.swing.JFrame {
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel9)
                     .addComponent(ID, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(178, 178, 178)
+                .addGap(150, 150, 150)
+                .addComponent(announcer)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addComponent(jButton2)
                     .addComponent(jButton3, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE))
@@ -126,6 +137,7 @@ public class TambahPengembalian extends javax.swing.JFrame {
         try {
             // TODO add your handling code here:
             PengembalianBuku.tambah(ID.getText());
+            announcer.setText("Proses Selesai");
         } catch (IOException ex) {
             Logger.getLogger(TambahPengembalian.class.getName()).log(Level.SEVERE, null, ex);
         }
@@ -168,6 +180,7 @@ public class TambahPengembalian extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JTextField ID;
+    private javax.swing.JLabel announcer;
     private javax.swing.JButton jButton2;
     private javax.swing.JButton jButton3;
     private javax.swing.JLabel jLabel8;
