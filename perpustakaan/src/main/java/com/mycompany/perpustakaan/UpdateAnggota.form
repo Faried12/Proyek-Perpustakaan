@@ -68,12 +68,12 @@
                   </Group>
                   <EmptySpace min="10" max="32767" attributes="0"/>
                   <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                      <Component id="noUpdateAnggota" alignment="0" pref="193" max="32767" attributes="0"/>
-                      <Component id="kelaminUpdateAnggota" alignment="0" max="32767" attributes="0"/>
-                      <Component id="namaUpdateAnggota" alignment="0" max="32767" attributes="0"/>
-                      <Component id="IDUpdateAnggota" alignment="0" max="32767" attributes="0"/>
-                      <Component id="alamatUpdateAnggota" alignment="0" max="32767" attributes="0"/>
-                      <Component id="tanggalUpdateAnggota" max="32767" attributes="0"/>
+                      <Component id="no" alignment="0" pref="193" max="32767" attributes="0"/>
+                      <Component id="jk" alignment="0" max="32767" attributes="0"/>
+                      <Component id="nama" alignment="0" max="32767" attributes="0"/>
+                      <Component id="ID" alignment="0" max="32767" attributes="0"/>
+                      <Component id="alamat" alignment="0" max="32767" attributes="0"/>
+                      <Component id="tl" max="32767" attributes="0"/>
                   </Group>
                   <EmptySpace min="-2" pref="58" max="-2" attributes="0"/>
               </Group>
@@ -87,31 +87,31 @@
                   <EmptySpace type="unrelated" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
                       <Component id="jLabel9" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="IDUpdateAnggota" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="ID" alignment="3" min="-2" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace type="unrelated" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
                       <Component id="jLabel10" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="namaUpdateAnggota" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="nama" alignment="3" min="-2" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace type="unrelated" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
                       <Component id="jLabel11" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="kelaminUpdateAnggota" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="jk" alignment="3" min="-2" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace type="unrelated" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
                       <Component id="jLabel13" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="tanggalUpdateAnggota" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="tl" alignment="3" min="-2" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace min="-2" pref="12" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
                       <Component id="jLabel14" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="alamatUpdateAnggota" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="alamat" alignment="3" min="-2" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace type="unrelated" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
-                      <Component id="noUpdateAnggota" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="no" alignment="3" min="-2" max="-2" attributes="0"/>
                       <Component id="jLabel12" alignment="3" min="-2" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace pref="16" max="32767" attributes="0"/>
@@ -151,9 +151,9 @@
             <Property name="text" type="java.lang.String" value="Nama"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JTextField" name="namaUpdateAnggota">
+        <Component class="javax.swing.JTextField" name="nama">
         </Component>
-        <Component class="javax.swing.JTextField" name="IDUpdateAnggota">
+        <Component class="javax.swing.JTextField" name="ID">
         </Component>
         <Component class="javax.swing.JButton" name="jButton2">
           <Properties>
@@ -162,8 +162,11 @@
             </Property>
             <Property name="text" type="java.lang.String" value="OK"/>
           </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButton2ActionPerformed"/>
+          </Events>
         </Component>
-        <Component class="javax.swing.JTextField" name="kelaminUpdateAnggota">
+        <Component class="javax.swing.JTextField" name="jk">
         </Component>
         <Component class="javax.swing.JLabel" name="jLabel11">
           <Properties>
@@ -181,7 +184,7 @@
             <Property name="text" type="java.lang.String" value="No Telp"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JTextField" name="noUpdateAnggota">
+        <Component class="javax.swing.JTextField" name="no">
         </Component>
         <Component class="javax.swing.JLabel" name="jLabel13">
           <Properties>
@@ -199,7 +202,7 @@
             <Property name="text" type="java.lang.String" value="Alamat"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JTextField" name="alamatUpdateAnggota">
+        <Component class="javax.swing.JTextField" name="alamat">
         </Component>
         <Component class="javax.swing.JButton" name="jButton4">
           <Properties>
@@ -209,7 +212,7 @@
             <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButton4ActionPerformed"/>
           </Events>
         </Component>
-        <Component class="javax.swing.JTextField" name="tanggalUpdateAnggota">
+        <Component class="javax.swing.JTextField" name="tl">
         </Component>
       </SubComponents>
     </Container>

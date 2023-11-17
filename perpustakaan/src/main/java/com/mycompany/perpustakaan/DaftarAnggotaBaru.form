@@ -76,21 +76,21 @@
                                       <Group type="102" alignment="0" attributes="0">
                                           <EmptySpace min="10" max="32767" attributes="0"/>
                                           <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                                              <Component id="noAnggota" pref="193" max="32767" attributes="0"/>
-                                              <Component id="jenisKelaminAnggota" max="32767" attributes="0"/>
-                                              <Component id="alamatAnggota" max="32767" attributes="0"/>
+                                              <Component id="no" pref="193" max="32767" attributes="0"/>
+                                              <Component id="jk" max="32767" attributes="0"/>
+                                              <Component id="alamat" max="32767" attributes="0"/>
                                           </Group>
                                       </Group>
                                       <Group type="102" alignment="0" attributes="0">
                                           <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                                          <Component id="TanggalAnggota" max="32767" attributes="0"/>
+                                          <Component id="tl" max="32767" attributes="0"/>
                                       </Group>
                                   </Group>
                               </Group>
                               <Group type="102" attributes="0">
                                   <Component id="jLabel2" min="-2" max="-2" attributes="0"/>
                                   <EmptySpace pref="62" max="32767" attributes="0"/>
-                                  <Component id="namaDaftarAnggota" min="-2" pref="193" max="-2" attributes="0"/>
+                                  <Component id="nama" min="-2" pref="193" max="-2" attributes="0"/>
                               </Group>
                           </Group>
                       </Group>
@@ -107,26 +107,26 @@
                   <EmptySpace type="unrelated" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
                       <Component id="jLabel2" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="namaDaftarAnggota" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="nama" alignment="3" min="-2" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace type="unrelated" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
                       <Component id="jLabel4" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="jenisKelaminAnggota" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="jk" alignment="3" min="-2" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace type="unrelated" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
                       <Component id="jLabel6" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="TanggalAnggota" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="tl" alignment="3" min="-2" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace min="-2" pref="12" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
                       <Component id="jLabel7" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="alamatAnggota" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="alamat" alignment="3" min="-2" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace type="unrelated" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
-                      <Component id="noAnggota" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="no" alignment="3" min="-2" max="-2" attributes="0"/>
                       <Component id="jLabel5" alignment="3" min="-2" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace pref="46" max="32767" attributes="0"/>
@@ -165,7 +165,7 @@
             <Property name="text" type="java.lang.String" value="Nama"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JTextField" name="namaDaftarAnggota">
+        <Component class="javax.swing.JTextField" name="nama">
         </Component>
         <Component class="javax.swing.JButton" name="jButton1">
           <Properties>
@@ -174,8 +174,11 @@
             </Property>
             <Property name="text" type="java.lang.String" value="OK"/>
           </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButton1ActionPerformed"/>
+          </Events>
         </Component>
-        <Component class="javax.swing.JTextField" name="jenisKelaminAnggota">
+        <Component class="javax.swing.JTextField" name="jk">
         </Component>
         <Component class="javax.swing.JLabel" name="jLabel4">
           <Properties>
@@ -193,7 +196,7 @@
             <Property name="text" type="java.lang.String" value="No Telp"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JTextField" name="noAnggota">
+        <Component class="javax.swing.JTextField" name="no">
         </Component>
         <Component class="javax.swing.JLabel" name="jLabel6">
           <Properties>
@@ -211,7 +214,7 @@
             <Property name="text" type="java.lang.String" value="Alamat"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JTextField" name="alamatAnggota">
+        <Component class="javax.swing.JTextField" name="alamat">
         </Component>
         <Component class="javax.swing.JButton" name="jButton2">
           <Properties>
@@ -228,7 +231,7 @@
             <Property name="text" type="java.lang.String" value="    "/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JTextField" name="TanggalAnggota">
+        <Component class="javax.swing.JTextField" name="tl">
         </Component>
       </SubComponents>
     </Container>
